@@ -1,0 +1,206 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #6633ff;
+}
+.index_fomulario{
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 250px;
+    width: 420px;
+    height: 228px;
+
+}
+.panel{
+    background-color: #ffffff;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;  
+    animation-name: formulario;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+
+}
+@keyframes formulario{
+    0%{
+
+    }
+    100%{
+        box-shadow: 5px 10px 30px 10px white; 
+        transform: scale(1.1,1.2);
+    }
+}
+.botones{
+    border-radius: 5px;
+    background-color: #3399ff;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.botones:hover{
+    background-color: #3366ff;
+}
+.formulariotablas{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+.tablas{
+    background-color: #f5f5dc;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+}
+.columnas{
+    border-color: red;
+}
+.btn_actualizar{
+    font-weight: bolder;
+    border: 1px solid black;
+    background-color: #33ccff;
+    text-decoration: none;
+    animation-name: botonactualizar;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    color:black;
+}
+h3{
+    color: white;
+}
+@keyframes botonactualizar{
+    0%{
+        
+        background-color:#ccffcc;
+    }
+    100%{
+        
+        background-color:#99ff00; 
+    }
+}
+
+.btn_eliminar{
+    font-weight: bolder;
+    border: 1px solid black;
+    background-color: #33ccff;
+    color: black;
+    text-decoration: none;
+    animation-name: botoneliminar;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes botoneliminar{
+    0%{
+        background-color:#ff9999;
+    }
+    100%{
+        background-color: #ff3333; 
+    }
+}
+.btnvolver{
+    border: 1px solid black;
+    background-color: #33ccff;
+    color: black;
+    /*margin-left: 100px;*/
+    text-decoration: none;
+    animation-name: botonvolver;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes botonvolver{
+    0%{
+
+    }
+    100%{
+        box-shadow: 2px 1px 10px 1px #33ccff; 
+    }
+}
+.btnvolver:hover{
+    color: blue;
+    
+}
+.t_actualizar{
+    margin-top: 100px;
+}
+
+.formulariotablas2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.formulariotablas3{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.formulario_insertar{
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;  
+/*    animation-name: formulario;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;*/
+}
+.btnvolver2{
+    border: 1px solid black;
+    background-color: #33ccff;
+    color: black;
+    margin-left: 500px;
+    text-decoration: none;
+    animation-name: botonvolver;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.btninsertar{
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #33ccff;
+    color: black;
+    text-decoration: none;
+    animation-name: botoninsertar;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes botoninsertar{
+    0%{
+       backgound-color:blue;
+    }
+    100%{
+        background-color:#6633ff
+    }
+}
+.btnvolver3{
+    border: 1px solid black;
+    background-color: #33ccff;
+    color: black;
+    margin-left: 130px;
+    text-decoration: none;
+    animation-name: botonvolver;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}

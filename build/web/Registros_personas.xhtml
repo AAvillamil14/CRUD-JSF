@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="Estilos.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+
+        <center><h:form class="formulariotablas">
+            <center><h3>Registros de personas</h3></center><br></br>
+            <h:dataTable value="#{personasBean.registrosPersonas()}" var="funcionregistros" border="2" class="tablas">
+
+                <h:column class="columnas" >
+                    <f:facet class="columnas" name="header"> Id persona</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.id}" ></h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header"> nombre</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.nombre}"></h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header"> Tipo de documento</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.descripcion}"> </h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header"> Numero de cedula</f:facet>
+                    <h:outputText class="columnas"  value="#{funcionregistros.n_cedula}"> </h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header"> Telefono</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.telefono}"> </h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header"> Correo electronico</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.correo}"> </h:outputText>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header">Pais residencia</f:facet>
+                    <h:outputText class="columnas" value="#{funcionregistros.n_pais}"> </h:outputText>
+                </h:column>
+                
+                <h:column class="columnas">
+                    <f:facet class="columnas" name="header" > Gestion del usuario  </f:facet>
+                    <center> <h:commandLink class="btn_actualizar" value="Actualizar" action="#{personasBean.consulta_actualizar(funcionregistros.n_cedula)}"></h:commandLink></center>
+                </h:column>
+                <h:column class="columnas">
+                    <f:facet class="" name="header" > Gestion del usuario  </f:facet>
+                    <center><h:commandLink  class="btn_eliminar" value="Eliminar" action="#{personasBean.eliminar_usuarios(funcionregistros.n_cedula)}"></h:commandLink></center>
+                </h:column>
+
+
+            </h:dataTable><br></br>
+            <h:commandLink value="Volver" action="index" class="btnvolver"></h:commandLink>
+            </h:form></center>
+    </h:body>
+</html>
+

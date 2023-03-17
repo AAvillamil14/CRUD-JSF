@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="Estilos.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form class="formulariotablas3">
+            <center><h3 class="t_actualizar">Registrar usuarios</h3></center><br></br>
+            <center><h:panelGrid columns="1" class="formulario_insertar">
+                    <h:outputLabel>Ingrese su nombre completo:</h:outputLabel>
+                    <h:inputText value="#{personasBean.persona.nombre}" required="true" validator="#{personasBean.validacionesnombre}" ></h:inputText><br></br>
+                    <h:outputLabel>Ingrese su tipo de documento:</h:outputLabel>
+                    <h:selectOneMenu value="#{personasBean.persona.t_documento}" required="true" validator="#{personasBean.ValidartipoDocumento}">
+                        <f:selectItem itemLabel="Seleccione" itemValue="" />
+                        <f:selectItems value="#{personasBean.documento}" var="d" itemLabel="#{d.descripcion}" itemValue="#{d.t_documento}"  />
+                    </h:selectOneMenu><br></br>
+
+                    <h:outputLabel>Ingrese su numero de documento:</h:outputLabel>
+                    <h:inputText value="#{personasBean.persona.n_cedula}" required="true"  validator="#{personasBean.validarNumerodocumento}"></h:inputText><br></br>
+
+                    <h:outputLabel>Ingrese su numero de telefono:</h:outputLabel>
+                    <h:inputText value="#{personasBean.persona.telefono}" required="true" validator="#{personasBean.validarTelefono}"></h:inputText><br></br>
+
+                    <h:outputLabel>Ingrese su correo electronico:</h:outputLabel>
+                    <h:inputText value="#{personasBean.persona.correo}" required="true" validator="#{personasBean.validarCorreo}"></h:inputText><br></br>
+
+                    <h:outputLabel>Ingrese la contraseña que desee:</h:outputLabel>
+                    <h:inputSecret value="#{personasBean.persona.contraseña}" maxlength="10" size="15" required="true" ></h:inputSecret><br></br>
+
+                    <h:outputLabel>Ingrese su pais de residencia</h:outputLabel>
+                    <h:selectOneMenu value="#{personasBean.persona.id_pais}" required="true">
+                        <f:selectItem itemLabel="Seleccione" itemValue=""  />
+                        <f:selectItems value="#{personasBean.getPaises()}" var="p" itemLabel="#{p.n_pais}" itemValue="#{p.id_pais}"/>
+                    </h:selectOneMenu><br></br>
+
+                    <h:commandButton action="#{personasBean.insertarUsuarios()}" value="Registrar" class="btninsertar"></h:commandButton>
+                </h:panelGrid></center>
+
+
+        </h:form>
+        <h:form>
+            <h:commandLink value="Volver" action="index" class="btnvolver2"></h:commandLink>
+        </h:form>
+    </h:body>
+</html>
+

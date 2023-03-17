@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="Estilos.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <center><h3 class="t_actualizar" >Actualizacion de datos</h3></center>
+        <h:form class="formulariotablas2">
+
+
+            <h:dataTable value="#{personasBean.persona}" class="tablas">
+                        
+                <h:column>
+                    <f:facet name="header"> Nombre</f:facet>
+                    <h:inputText value="#{personasBean.persona.nombre}" validator="#{personasBean.validacionesnombre}"></h:inputText>
+                </h:column> 
+                <h:column>
+                    <f:facet name="header"> Telefono</f:facet>
+                    <h:inputText value="#{personasBean.persona.telefono}" validator="#{personasBean.validarTelefono}"> </h:inputText>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> Correo electronico</f:facet>
+                    <h:inputText value="#{personasBean.persona.correo}" validator="#{personasBean.validarCorreo}"> </h:inputText>
+                </h:column>
+                <h:column>
+                <h:commandButton action="#{personasBean.actualizarUsuario()}" value="Actualizar" class="btn_actualizar"></h:commandButton>
+                </h:column>
+               
+            </h:dataTable>
+           <h:commandLink value="Volver" action="index" class="btnvolver3"></h:commandLink>
+            
+            
+        </h:form>
+    </h:body>
+</html>
+
